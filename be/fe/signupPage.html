@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8">
+   
+    <title>signin page</title>
+</head>
+<body>
+    <h1>signIn page</h1>
+     <form id= "signup" > 
+        <input required type="text" id="name" name="name" placeholder = "enter name"> 
+        <input required type="tel" id="phone" name="phone" placeholder = "enter phone number"> 
+        <input required type="password" id="password" name = "password" placeholder = "enter password">
+         
+        <button type="submit">login</button>
+    </form>
+    <script>
+        document.getElementById("signup").addEventListener("submit",
+        async function (event)
+    {
+        event.preventDefault();//stops reloading page
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const password = document.getElementById("password").value;
+        try{
+            const response = await fetch ('/',{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify({name,phone,password})
+        })
+        if (!response.ok){
+            const text = await response.text();
+            alert("Error:"+text);
+            return;
+        }
+        const result = await response.json();
+        
+        }
+        catch (error){
+            console.log(error)
+        }
+    });
+    </script>
+    
+</body>
+</html>
