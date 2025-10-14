@@ -3,17 +3,4 @@ pip install seaborn
 pip install scikit-learn nltk
 pip install beautifulsoup4
 
-import requests
-from bs4 import BeautifulSoup4
 
-def crawl_web(url):
-  response = requests.get(url)
-  soup = BeautifulSoup(response.text, 'html.parser')
-  test_data = soup.get_text()
-
-  return text_data
-
-  org_url = "https://www.google.com"
-  //or here you can take from useer also i am 
-  // taking as pre defined
-  org_data = crawl_website(org_url)
