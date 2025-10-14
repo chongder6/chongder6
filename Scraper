@@ -1,6 +1,1 @@
-//Install beautifulsoup, scikit-learn nltk, pandas, matplotlib, seaborn
-pip install seaborn
-pip install scikit-learn nltk
-pip install beautifulsoup4
-
-
+git add .
