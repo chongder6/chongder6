@@ -1,0 +1,9 @@
+//here also giving the code how one can save the crawled data(CSV)
+
+import csv
+
+with open('output.csv', 'w', newline='', encoding='utf-8') as file:
+    writer = csv.writer(file)
+    writer.writerow(['Column1', 'Column2'])  # Write headers like new teach, launches, etc
+    for item in data:
+        writer.writerow([item.text, 'OtherData'])  
