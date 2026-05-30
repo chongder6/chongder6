@@ -7,7 +7,7 @@
 
 - 🌱 I’m currently learning **Rust**
 
-- 💬 Ask me about **LLM | AI | RAG | Politics**
+- 💬 Ask me about **LLM | AI | RAG | Product**
 
 - 📫 How to reach me **arijitchongder3@gmail.com**
 
